@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <center>
+        <h1>empmgr details</h1>
+        <table border="3px">
+            <tr>
+                <th>empno</th>
+                <th>ename</th>
+                <th>esal</th>
+                <th>edeptno</th>
+                <th>ejob</th>
+                <th>ecomm</th>
+                <th>mgr empno</th>
+                <th>mgr name</th>
+                <th>mgr sal</th>
+                <th>mgr job</th>
+            </tr>
+            {% for emo in LEMO %}
+            <tr>
+                <td>{{emo.empno}}</td>
+                <td>{{emo.ename}}</td>
+                <td>{{emo.sal}}</td>
+                <td>{{emo.deptno}}</td>
+                <td>{{emo.job}}</td>
+                <td>{{emo.comm}}</td>
+                <td>{{emo.mgr.empno}}</td>
+                <td>{{emo.mgr.ename}}</td>
+                <td>{{emo.mgr.sal}}</td>
+                <td>{{emo.mgr.job}}</td>
+            </tr>
+
+
+            {% endfor %}
+
+        </table>
+    </center>
+</body>
+</html>

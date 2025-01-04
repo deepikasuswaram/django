@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            background-color: beige;
+            width: 100%;
+            border:2px solid black;
+        }
+        th{
+            font-weight: bold;
+            font-family: sans-serif;
+            padding: 15px;
+            border:2px solid black;
+
+        }
+        td{
+            padding:10px;
+            text-align: center;
+            border:1px solid black;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <h1>DeptEmp Details</h1>
+   <table>
+    <tr>
+        <th>deptno</th>
+        <th>dname</th>
+        <th>loc</th>
+        <th colspan=100%>employees</th>
+    </tr>
+
+        {% for DO in LDEO %}
+        <tr>
+        <td>{{DO.deptno}}</td>
+        <td>{{DO.dname}}</td>
+        <td>{{DO.loc}}</td>
+
+       
+            {% for EO in DO.emp_set.all %}
+                <td>{{EO.ename}}</td>
+            {% endfor %}
+        {% endfor %}
+    
+    </tr>
+        </table>
+    </center>
+</body>
+</html>

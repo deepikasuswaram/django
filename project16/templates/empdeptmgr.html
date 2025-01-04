@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>empdeptmgr details</h1>
+        <table border="1px">
+            <tr>
+                <th>empno</th>
+                <th>ename</th>
+                <th>esal</th>
+                <th>edeptno</th>
+                <th>ejob</th>
+                <th>ecomm</th>
+                <th>deptno</th>
+                <th>dname</th>
+                <th>dloc</th>
+                <th>mgr empno</th>
+                <th>mgr name</th>
+                <th>mgr sal</th>
+                <th>mgr job</th>
+            </tr>
+            {% for edmo in LEDMO %}
+            <tr>
+                <td>{{edmo.empno}}</td>
+                <td>{{edmo.ename}}</td>
+                <td>{{edmo.sal}}</td>
+                <td>{{edmo.deptno}}</td>
+                <td>{{edmo.job}}</td>
+                <td>{{edmo.comm}}</td>
+                <td>{{edmo.deptno}}</td>
+                <td>{{edmo.deptno.dname}}</td>
+                <td>{{edmo.deptno.loc}}</td>
+                <td>{{edmo.mgr.empno}}</td>
+                <td>{{edmo.mgr.ename}}</td>
+                <td>{{edmo.mgr.sal}}</td>
+                <td>{{edmo.mgr.job}}</td>
+            </tr>
+
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>

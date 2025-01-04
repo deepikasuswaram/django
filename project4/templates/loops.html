@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>loops</h1>
+        {% for i in name %}
+        <h1>{{i}}</h1>
+        
+        {% endfor %}
+        {% for i in mobile %}
+        <h1>{{i}}</h1>
+        
+        {% endfor %}
+        <h1><a href="{% url 'conditions' %}">Go to Conditions</a></h1>
+    </center>
+</body>
+</html>
